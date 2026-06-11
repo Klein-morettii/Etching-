@@ -29,11 +29,11 @@ function generate(val){
         block.style.boxSizing = "border-box"
         contain.append(block)
 
-        let isDrawing = "false"
-        contain.addEventListener("mousedown", ()=>{
+        let isDrawing = false
+        document.addEventListener("mousedown", ()=>{
             isDrawing  = true
         })
-        contain.addEventListener("mouseup", ()=>{
+        document.addEventListener("mouseup", ()=>{
             isDrawing  = false
         })
         block.addEventListener("mouseenter", ()=>{
@@ -44,10 +44,8 @@ function generate(val){
         })
 
         block.addEventListener("click", ()=>{
-            if(isDrawing){
                 block.style.backgroundColor = "white"
                 block.style.border = "white"
-            }
         })
     }
 }
